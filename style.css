@@ -1,0 +1,327 @@
+body {
+    background-color: #f4f4f4;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    margin: 0;
+}
+
+/* Main Container */
+
+.fe-main-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Navigation */
+
+.fe-nav {
+    background-color: #0f2f34;
+    padding: 16px 0;
+}
+
+/* Navigation Menu */
+
+.fe-nav-menu {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 0;
+    padding: 0;
+}
+
+/***** Navigation Items *****/
+
+.fe-nav-items {
+    list-style: none;
+    margin: 0 24px;
+    color: #FFFFFF;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+@media screen and (max-width: 640px) {
+    .fe-nav {
+        position: absolute;
+        right: 0;
+        left: 0;
+        padding: 8px 8px;
+        background-color: transparent;
+    }
+    .fe-nav.open {
+        height: 360px;
+        background-color: #0f2f34;
+    }
+    .fe-nav-menu {
+        display: none;
+        flex-direction: column;
+        margin-top: 32px;
+        text-align: center;
+    }
+    .open .fe-nav-menu {
+        display: block;
+    }
+    .fe-nav-items {
+        padding: 16px;
+        font-size: 24px;
+    }
+    .fe-menu-container {
+        display: inline-block;
+        cursor: pointer;
+    }
+    .fe-menu-bar_1, .fe-menu-bar_2, .fe-menu-bar_3 {
+        width: 35px;
+        height: 5px;
+        background-color: #fff;
+        margin: 6px 6px;
+        transition: 0.4s;
+    }
+    .open .fe-menu-bar_1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+    }
+    .open .fe-menu-bar_2 {
+        opacity: 0;
+    }
+    .open .fe-menu-bar_3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+    }
+}
+
+/* Cover Image Container */
+
+.fe-cover-img-container {
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    height: 400px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 124px;
+    padding: 8px;
+}
+
+@media screen and (max-width: 640px) {
+    .fe-cover-img-container {
+        height: 360px;
+    }
+}
+
+.fe-title {
+    font-size: 60px;
+    line-height: 62px;
+    margin: 20px 0;
+    color: #FFFFFF;
+}
+
+.fe-city {
+    font-size: 16px;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+/* Section 1 */
+
+.fe-section {
+    margin: 0 auto;
+    max-width: 640px;
+    padding: 0px 8px 60px 8px;
+}
+
+/*Section Title*/
+
+.fe-section-title {
+    font-size: 48px;
+    line-height: 48px;
+}
+
+/*Section Description */
+
+.fe-description {
+    max-width: 640px;
+    margin: 32px auto;
+}
+
+/*Image*/
+
+.fe-img {
+    max-width: 640px;
+}
+
+.fe-img img {
+    width: 100%;
+}
+
+@media screen and (max-width: 640px) {
+    .fe-img {
+        margin: 0 auto;
+    }
+}
+
+/* Section 2 */
+
+/*Course Plan*/
+
+.fe-course-plan {
+    max-width: 640px;
+    margin: 32px auto;
+}
+
+/*Course Year*/
+
+.fe-course-year {
+    color: #000000;
+    height: 40px;
+    border-bottom: 1px solid #aaa;
+    padding: 8px 8px;
+}
+
+/*Course Content Title*/
+
+.fe-course-content-title {
+    font-size: 22px;
+    font-style: italic;
+}
+
+/*Course Title*/
+
+.fe-course-title {
+    border: none;
+    border-bottom: 1px solid #aaa;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 8px 0;
+    padding: 8px 0;
+    cursor: pointer;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: 600;
+    background-color: transparent;
+}
+
+.fe-course-title:after {
+    content: "";
+    margin: 8px;
+    display: inline-block;
+    border: 7px solid transparent;
+    border-top: 8px solid gray;
+    border-bottom: 0 none;
+}
+
+/*Course Description*/
+
+.fe-course-description {
+    display: none;
+    margin-top: 0;
+}
+
+.fe-course.open .fe-course-description {
+    display: block;
+}
+
+/* Section 3 */
+
+/*Contact Us*/
+
+.fe-contact-us {
+    max-width: 640px;
+    margin: 32px auto;
+}
+
+/*Contact Us Form*/
+
+.fe-contact-us-form {
+    display: block;
+    margin: 16px 0;
+}
+
+/*Contact Us Form Label*/
+
+.fe-contact-us-form-label {
+    display: block;
+    font-size: 18px;
+}
+
+/*Contact us input Form*/
+
+.fe-contact-us-form-input {
+    padding: 8px 8px;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    margin: 8px 0;
+    font-size: inherit;
+    border: 1px solid #aaa;
+}
+
+/*Submit Button*/
+
+.fe-contact-us-submit {
+    width: 120px;
+    height: 40px;
+    background-color: #0076bd;
+    color: #FFF;
+    text-align: center;
+    padding: 8px 8px;
+    border-radius: 5px;
+    margin-top: 16px;
+    font-size: inherit;
+}
+
+/*Error Message for form validation*/
+
+.validation-error-message {
+    margin-top: 16px;
+    color: red;
+    height: 24px;
+    font-style: italic;
+}
+
+/*Footer*/
+
+.fe-footer {
+    background-color: #0f2f34;
+    height: 160px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 8px 0;
+}
+
+/*Footer link styles*/
+
+.fe-footer-link {
+    display: flex;
+    flex-direction: column;
+    margin: 32px 32px;
+    letter-spacing: 2px;
+}
+
+/*Footer link headeing*/
+
+.fe-footer-link-head {
+    font-size: 18px;
+    letter-spacing: 4px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #FFF;
+}
+
+/*a tags in Footer*/
+
+a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 640px) {
+    .fe-footer {
+        height: auto;
+        justify-content: left;
+    }
+}
