@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="sv">
 
 <head>
@@ -213,4 +213,29 @@
     <script src="main.js"></script>
 </body>
 
+</html> -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Redirecting...</title>
+    <script>
+      (function () {
+        const params = new URLSearchParams(window.location.search);
+        const code = params.get('code');
+        const state = params.get('state');
+
+        if (code) {
+          // Redirect to your local backend
+          const localCallback = `http://localhost:5000/callback?code=${code}&state=${state}`;
+          window.location.href = localCallback;
+        } else {
+          document.body.innerHTML = 'Missing authorization code.';
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <p>Redirecting...</p>
+  </body>
 </html>
